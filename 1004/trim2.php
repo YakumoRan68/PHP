@@ -17,7 +17,9 @@
     length
     If length is given and is positive, the string returned will contain at most length characters beginning from start (depending on the length of string).
 
-    If length is given and is negative, then that many characters will be omitted from the end of string (after the start position has been calculated when a start is negative). If start denotes the position of this truncation or beyond, FALSE will be returned.
+    If length is given and is negative, then that many characters will be omitted from the end of string (after the start position has been calculated when a start is negative). 
+    
+    And If start denotes the position of this truncation or beyond, FALSE will be returned.
 
     If length is given and is 0, FALSE or NULL, an empty string will be returned.
 
@@ -27,7 +29,9 @@
 
     $str1 = substr($str, 1);
     $str2 = substr($str, 2, 5);
-    $str3 = substr($str, -3);
-
-    print $str."</br>\n</br>\n".$str1."</br>\n".$str2."</br>\n".$str3;
+    $str3 = substr($str, -8, -3);
+    $err = substr($str, -1, -5); 
+    print $str."</br>\n</br>\n".$str1."</br>\n".$str2."</br>\n".$str3."</br>\n";
+    
+    var_dump($err);
 ?>
